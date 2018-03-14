@@ -16,7 +16,7 @@ class StoreSpec: QuickSpec {
                 it("triggers action") {
                     let user = User(name: "Jane Doe")
                     
-                    store.dispatch(SetCurrentUserAction(user: user))
+                    store.dispatch(action: SetCurrentUserAction(user: user))
                     
                     expect(store.currentUser).to(equal(user))
                 }
@@ -25,7 +25,7 @@ class StoreSpec: QuickSpec {
                     let usersToReturn = [User(name: "Jane Doe"), User(name: "John Doe")]
                     
                     let action = FetchUsersAction(usersToReturn: usersToReturn)
-                    store.dispatch(action)
+                    store.dispatch(action: action)
                     
                     expect(store.users).toEventually(equal(usersToReturn))
                 }

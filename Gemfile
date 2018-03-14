@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem "scan"
+gem "unf_ext"
+gem "fastlane"

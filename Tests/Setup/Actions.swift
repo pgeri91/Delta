@@ -24,8 +24,8 @@ struct FetchUsersAction: DynamicActionType {
     let usersToReturn: [User]
 
     func call() {
-        delay(0.1) {
-            store.dispatch(SetUsersAction(users: self.usersToReturn))
+        delay(seconds: 0.1) {
+            store.dispatch(action: SetUsersAction(users: self.usersToReturn))
         }
     }
 }
