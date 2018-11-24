@@ -14,6 +14,6 @@ Pod::Spec.new do |spec|
   spec.source = { :git => "https://github.com/thoughtbot/Delta.git", :tag => "v#{spec.version}", :submodules => true }
   spec.source_files = "Sources/**/*.{h,swift}"
   spec.requires_arc = true
-  spec.platform = :ios
   spec.ios.deployment_target = "8.0"
+  spec.osx.deployment_target = '10.10'
 end
